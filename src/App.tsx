@@ -5,7 +5,7 @@ interface ICubeParams {
   id: number;
   width: number;
   height: number;
-  color: string;
+  depth: number;
 }
 
 interface ICubeAddtionalParams {
@@ -36,16 +36,16 @@ class App extends Component<{}, IModel> {
             id: 2,
             width: 200,
             height: 200,
-            color: 'red',
+            depth: 300,
           },
           additionalParameters: [
             {
-              paramKeyName: 'Name',
-              paramKeyValue: 'Value',
+              paramKeyName: 'README',
+              paramKeyValue: 'GO CHECK IT!',
             },
             {
-              paramKeyName: 'Name',
-              paramKeyValue: 'Value',
+              paramKeyName: 'README',
+              paramKeyValue: 'GO CHECK IT!',
             },
           ],
         },
@@ -54,7 +54,7 @@ class App extends Component<{}, IModel> {
             id: 3,
             width: 200,
             height: 200,
-            color: 'red',
+            depth: 300,
           },
           additionalParameters: [],
         },
@@ -63,7 +63,7 @@ class App extends Component<{}, IModel> {
         id: 4,
         width: 0,
         height: 0,
-        color: 'red',
+        depth: 0,
       },
       cubeCreatingAdditional: [],
       seeDocumentation: false,
@@ -190,10 +190,10 @@ class App extends Component<{}, IModel> {
                     />
                   </div>
                   <div className="info">
-                    <label>color:</label>
+                    <label>depth:</label>
                     <input
-                      value={this.state.cubeCreating.color}
-                      onChange={(e) => this.handleOnCreating('color', e.target.value)}
+                      value={this.state.cubeCreating.depth}
+                      onChange={(e) => this.handleOnCreating('depth', e.target.value)}
                     />
                   </div>
                   {this.state.cubeCreatingAdditional.map((param: ICubeAddtionalParams, index) => {
@@ -259,12 +259,12 @@ class App extends Component<{}, IModel> {
                     />
                   </div>
                   <div className="info">
-                    <label>color:</label>
+                    <label>depth:</label>
                     <input
                       className="text"
-                      value={cube.parameters.color}
+                      value={cube.parameters.depth}
                       onChange={(e) =>
-                        this.handleCubeSizeChange(cube.parameters.id, 'color', e.target.value)
+                        this.handleCubeSizeChange(cube.parameters.id, 'depth', e.target.value)
                       }
                     />
                   </div>
@@ -291,15 +291,15 @@ class App extends Component<{}, IModel> {
                     })}
 
                   <div className="cube">
-                    cube proportions: {cube.parameters.width}x{cube.parameters.height}, color:{' '}
-                    {cube.parameters.color}
+                    cube proportions: {cube.parameters.width}x{cube.parameters.height}, depth:{' '}
+                    {cube.parameters.depth}
                   </div>
                 </div>
               );
             })}
           </div>
         </div>
-        <div className="documantation-section">s</div>
+        <a href="">R E A D M E . m d</a>
       </div>
     );
   }
