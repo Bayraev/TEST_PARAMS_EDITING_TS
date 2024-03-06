@@ -1,38 +1,83 @@
+body {
+  background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Запрет горизонтальной прокрутки */
+
+}
+
+label, input, div {
+  display: block;
+}
+label {
+  width: 80px;
+}
+input {
+  width: calc(100% - 20px);
+  margin: 0 0 10px 5px;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.item {
+  width: 400px;
+  margin-bottom: 60px;
+  border: 1px white solid;
+  padding: 20px;
+}
+.delete {
+  position: relative;
+  top: -15px;
+  left: 200px;
+  height: 10px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.create-section {
+  margin-bottom: 60px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.create {
+  padding: 20px 20px 0 20px;
+  width: 400px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  border-bottom: 0px solid wheat;
+}
+.create .text-block {
+  width: 92%;
+}
+.create button{
+  height: 85px;
+}
+.create .add-new-type {
+  height: 30px;
+  width: 30px;
+  margin-left: 20px;
+  background-color: rgba(255, 255, 255, 0);
   color: white;
+  font-size: large;
+  font-weight: 600;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.key-field {
+  width: 60px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info {
+  display: flex;
+}
+
+.documentaion-section {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#display {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
