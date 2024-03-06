@@ -299,7 +299,7 @@ class App extends Component<{}, IModel> {
             })}
           </div>
         </div>
-        <a href="">R E A D M E . m d</a>
+        <a href="https://github.com/Bayraev/TEST_PARAMS_EDITING_TS/blob/main/README.md" target=”_blank”>R E A D M E . m d</a>
       </div>
     );
   }
